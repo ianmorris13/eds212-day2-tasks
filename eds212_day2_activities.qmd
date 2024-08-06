@@ -49,7 +49,7 @@ dc_dt_fun(a)
 ```{r}
 ggplot(data = penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
   geom_point(aes(color = species)) +
-  scale_color_manual(values = c("darkorange","purple","red")) +
+  scale_color_manual(values = c("darkorange","yellow","red")) +
   labs(y = "Bill Length (mm)",
        x = "Bill Depth (mm)",
        title = "Palmer penguin bill measurements",
@@ -62,7 +62,7 @@ ggplot(data = penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
 ```{r}
 ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
   geom_jitter(aes(color = species)) +
-  scale_color_manual(values = c("darkorange","purple","red")) +
+  scale_color_manual(values = c("darkorange","yellow","red")) +
   labs(x = "Species",
        y = "Flipper Length (mm)",
        title = "Palmer penguin Flipper Length by Species",
