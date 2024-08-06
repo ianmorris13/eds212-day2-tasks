@@ -1,0 +1,12 @@
+---
+title: "derivatives"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+libary(tidyverse)
+library(palmerpenguins)
+```
+
