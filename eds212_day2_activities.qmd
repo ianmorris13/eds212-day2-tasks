@@ -6,7 +6,43 @@ editor_options:
 ---
 
 ```{r}
-libary(tidyverse)
+library(tidyverse)
 library(palmerpenguins)
+```
+
+```{r}
+# Find the slope of f(x) = x^2 at x = 3
+ct <- function(x){
+  x^2
+}
+
+# find deriv of C(t) ----
+dc_dt <- D(expr = expression(x^2), name="x")
+dc_dt
+
+# store the deriv as a function ----
+dc_dt_fun <- function(t) {
+  2*x
+}
+x=3
+dc_dt_fun(x)
+```
+
+```{r}
+# Find the slope of P(a) = 2(3a+2)^4 - 5 at a=1.2
+cP <- function(a){
+  2* (3*a+2)^4 -5
+}
+
+# find deriv of C(t) ----
+dcP_dt <- D(expr = expression(2* (3*a+2)^4 -5), name="a")
+dcP_dt
+
+# store the deriv as a function ----
+dc_dt_fun <- function(a) {
+  2 * (4 * (3 * (3 * a + 2)^3))
+}
+a<-1.2
+dc_dt_fun(a)
 ```
 
