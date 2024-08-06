@@ -46,3 +46,28 @@ a<-1.2
 dc_dt_fun(a)
 ```
 
+```{r}
+ggplot(data = penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(y = "Bill Length (mm)",
+       x = "Bill Depth (mm)",
+       title = "Palmer penguin bill measurements",
+       subtitle = "Palmer Archipelago, Antarctice (2007 - 2009)",
+       caption = "Collected by Dr. Kristen Gorman and colleagues at Palmer Station LTER") +
+  facet_wrap(~island) +
+  theme_minimal()
+```
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
+  geom_jitter(aes(color = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(x = "Species",
+       y = "Flipper Length (mm)",
+       title = "Palmer penguin Flipper Length by Species",
+       subtitle = "Palmer Archipelago, Antarctice (2007 - 2009)",
+       caption = "Collected by Dr. Kristen Gorman and colleagues at Palmer Station LTER") +
+  facet_wrap(~island) +
+  theme_minimal()
+```
